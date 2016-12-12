@@ -1,0 +1,41 @@
+{{!-- Menu page --}}
+{{#if @blog.navigation}}
+<nav id="menu-mobile" class="menu-mobile hide-after-lg">
+	<ul class="menu-mobile-wrap u-unstyled">
+		{{navigation}}
+	</ul>
+</nav>
+{{/if}}
+
+<footer class="footer">
+	<!-- <div class="footer-topbar">
+		<div class="footer-wrap">
+			<div class="footer-links-social social_box">
+				{{#if @blog.facebook}} <a title="Facebook {{@blog.facebook}}" href="{{facebook_url}}" target="_blank" class="i-facebook"></a>{{/if}}
+				{{#if @blog.twitter}} <a title="Twitter {{@blog.twitter}}" href="{{twitter_url}}" target="_blank" class="i-twitter"></a>{{/if}}
+			</div>
+			<div id="footer-menu" class="footer-menu" style="display:none"></div>
+		</div>
+	</div> -->
+	<div class="info-container">
+	    <div class="info-content">
+	    <img class="info-avatar" src="//tva2.sinaimg.cn/crop.0.0.180.180.180/005O8ntygw1el3q0so7otj30500500su.jpg">
+	    <div class="info-link">
+	      <a class="info-icon extra" href="https://twitter.com/iLoveChina0791" target="_blank"><i class="fa fa-twitter"></i></a>
+	      <a class="info-icon extra" href="https://github.com/JustDoItLee" target="_blank"><i class="github alternate icon"></i></a>
+	      <a class="info-icon" href="http://justdoitlee.com/tag/code"><i class="code icon"></i></a>
+	      <div style="width: 100px; height: 100px; float: left; margin: 0 20px;"></div>
+	      <a class="info-icon" href="/tag/fragment/"><i class="puzzle icon"></i></a>
+	      <a class="info-icon extra" href="http://weibo.com/2274030740" target="_blank"><i class="fa fa-weibo"></i></a>
+	      <a class="info-icon extra" href="http://justdoitlee.com/me" target="_blank"><i class="power icon"></i></a>
+	    </div>
+	    </div>
+	</div>
+
+	<div class="footer-bottombar">
+		<div class="footer-wrap">
+			<div class="footer-copy">&copy; {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a> Powered by <a href="https://ghost.org" target="_blank">Ghost</a></div>
+			<div class="footer-design-author"><span>Design with</span> <i class="icon heart"></i> by <a href="http://justdoitlee.com/" target="_blank" >@李智</a></div>
+		</div>
+	</div>
+</footer>

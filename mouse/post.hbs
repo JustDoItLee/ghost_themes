@@ -1,0 +1,46 @@
+{{!< default}}
+
+{{#post}}
+
+  <article class="post-container post-container--single">
+
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="{{date format="DD MMM YYYY"}}" class="post-meta__date date">{{date format="DD MMM YYYY"}}</time> &#8226; <span class="post-meta__tags tags">{{tags prefix="于 "}}</span>
+        <!--<span class="post-meta__author author"><img src="{{author.image}}" alt="profile image for {{author.name}}" class="avatar post-meta__avatar" /> by {{author.name}}</span>-->
+      </div>
+      <h1 class="post-title">{{{title}}}</h1>
+    </header>
+
+    <section class="{{post_class}}">
+      {{content}}
+    </section>
+
+  </article>
+  <br>
+  <hr style="height:1px;border:none;border-top:1px solid #555555;" />
+  <aside class="read-next">
+    {{#next_post}}
+    <a class="read-next-story {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
+        <section class="post">
+            <h3>下一篇:{{title}}</h3>
+        </section>
+    </a>
+    {{/next_post}}
+    {{#prev_post}}
+    <a class="read-next-story prev {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
+        <section class="post">
+            <h3>上一篇:{{title}}</h3>
+        </section>
+    </a>
+    {{/prev_post}}
+</aside>
+  <hr style="height:1px;border:none;border-top:1px solid #555555;" />
+  <br>
+<!-- 多说评论框 start -->
+          <div class="ds-thread" data-thread-key="{{slug}}" data-title="{{title}}" data-url="{{url absolute="true"}}"></div>
+<!-- 多说评论框 end -->
+<!-- <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+   {{> comments}} -->
+{{/post}}
